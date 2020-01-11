@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'VoA' do
+
+  pod 'RxSwift', '5.0.0'
+  pod 'RxCocoa', '5.0.0'
+  pod 'SnapKit', '5.0.0'
+  pod 'Alamofire', '5.0.0-rc.3'
+  pod 'ObjectMapper', '~> 3.4'
+  pod 'SwiftyJSON', '4.0'
+  pod 'SwiftlyIndicator'
+  pod 'Texture', :git =>  'https://github.com/TextureGroup/Texture.git', :branch => 'master', :inhibit_warnings => true
+
+  target 'VoATests' do
+    inherit! :search_paths
+    
+    pod 'RxBlocking', '5.0.0'
+    pod 'RxTest', '5.0.0'
+
+  end
+
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '5.0'
+        end
+    end
+end
