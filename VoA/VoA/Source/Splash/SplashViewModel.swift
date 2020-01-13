@@ -14,7 +14,7 @@ class SplashViewModel: NSObject, ReactiveViewModelable {
     typealias OutputType = Output
     
     struct Input {
-        public let request = PublishRelay<Void>()
+
     }
     
     struct Output {
@@ -33,18 +33,7 @@ class SplashViewModel: NSObject, ReactiveViewModelable {
     }
     
     private func rxBind() {
-        
-        input.request
-            .flatMap {
-                GraphqlNetworker.request(query: LaunchListQuery())
-        }.subscribe(onNext: { (json) in
-            
-            print("success: \(json)")
-            
-        }, onError: { (error) in
-            print("error : \(error)")
-            }).disposed(by: bag)
-        
+
     }
     
 }

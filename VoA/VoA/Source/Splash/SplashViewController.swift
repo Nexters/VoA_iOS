@@ -29,7 +29,5 @@ class SplashViewController: BaseViewController {
     
     override func bind() {
         super.bind()
-        
-        viewModel.input.request.accept(())
     }
 }

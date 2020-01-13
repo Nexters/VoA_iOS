@@ -16,7 +16,7 @@ class VoAService: NSObject {
     
     //http://localhost:4000
     public var apiURL: URL {
-        return URL(string: "http://localhost:4000")!
+        return URL(string: "")!
     }
 
     public static let shared = VoAService()
