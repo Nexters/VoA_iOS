@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C570F4723CC5FF000C438CA /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C570F4623CC5FEF00C438CA /* schema.json */; };
+		4C570F4D23CC609200C438CA /* LaunchListQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4C570F4C23CC609200C438CA /* LaunchListQuery.graphql */; };
+		4C570F4F23CC615400C438CA /* LaunchListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F4E23CC615400C438CA /* LaunchListQuery.swift */; };
+		4C570F5123CC61EE00C438CA /* GraphqlNetworker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F5023CC61EE00C438CA /* GraphqlNetworker.swift */; };
+		4C570F5323CC621200C438CA /* VoAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F5223CC621200C438CA /* VoAService.swift */; };
+		4C570F5623CC629E00C438CA /* ReactiveViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F5523CC629E00C438CA /* ReactiveViewModelable.swift */; };
+		4C570F5823CC62F700C438CA /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F5723CC62F700C438CA /* SplashViewModel.swift */; };
+		4C570F5B23CC641700C438CA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F5A23CC641700C438CA /* BaseViewController.swift */; };
 		4C5D650823C96CC100822386 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D650723C96CC100822386 /* SplashViewController.swift */; };
 		4C5D650A23C96CCD00822386 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D650923C96CCD00822386 /* ViewController.swift */; };
 		4C5D650C23C96DB100822386 /* VoAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5D650B23C96DB100822386 /* VoAColor.swift */; };
@@ -33,6 +41,14 @@
 /* Begin PBXFileReference section */
 		087F85FA55F8FFDE72829D69 /* Pods-VoATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoATests.debug.xcconfig"; path = "Target Support Files/Pods-VoATests/Pods-VoATests.debug.xcconfig"; sourceTree = "<group>"; };
 		431B4870E5DD1BF151602FE7 /* Pods-VoATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoATests.release.xcconfig"; path = "Target Support Files/Pods-VoATests/Pods-VoATests.release.xcconfig"; sourceTree = "<group>"; };
+		4C570F4623CC5FEF00C438CA /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		4C570F4C23CC609200C438CA /* LaunchListQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchListQuery.graphql; sourceTree = "<group>"; };
+		4C570F4E23CC615400C438CA /* LaunchListQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchListQuery.swift; path = VoA/Source/Common/SDK/Graphql/Query/LaunchListQuery.swift; sourceTree = SOURCE_ROOT; };
+		4C570F5023CC61EE00C438CA /* GraphqlNetworker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphqlNetworker.swift; sourceTree = "<group>"; };
+		4C570F5223CC621200C438CA /* VoAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoAService.swift; sourceTree = "<group>"; };
+		4C570F5523CC629E00C438CA /* ReactiveViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewModelable.swift; sourceTree = "<group>"; };
+		4C570F5723CC62F700C438CA /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		4C570F5A23CC641700C438CA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C5D650223C96B0800822386 /* VoA-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VoA-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C5D650723C96CC100822386 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4C5D650923C96CCD00822386 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +89,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C570F4823CC5FFB00C438CA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4C570F5223CC621200C438CA /* VoAService.swift */,
+				4C570F4923CC600100C438CA /* Graphql */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		4C570F4923CC600100C438CA /* Graphql */ = {
+			isa = PBXGroup;
+			children = (
+				4C570F5023CC61EE00C438CA /* GraphqlNetworker.swift */,
+				4C570F4A23CC602300C438CA /* Query */,
+			);
+			path = Graphql;
+			sourceTree = "<group>";
+		};
+		4C570F4A23CC602300C438CA /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				4C570F4E23CC615400C438CA /* LaunchListQuery.swift */,
+				4C570F4C23CC609200C438CA /* LaunchListQuery.graphql */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		4C570F5423CC628B00C438CA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4C570F5523CC629E00C438CA /* ReactiveViewModelable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4C570F5923CC640D00C438CA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4C570F5A23CC641700C438CA /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		4C5D650423C96C8D00822386 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +144,9 @@
 		4C5D650523C96CA800822386 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C570F5923CC640D00C438CA /* Base */,
+				4C570F5423CC628B00C438CA /* Protocol */,
+				4C570F4823CC5FFB00C438CA /* SDK */,
 				4C5D650B23C96DB100822386 /* VoAColor.swift */,
 			);
 			path = Common;
@@ -95,6 +157,7 @@
 			children = (
 				4C5D650723C96CC100822386 /* SplashViewController.swift */,
 				4C5D651223C9710200822386 /* SplashNode.swift */,
+				4C570F5723CC62F700C438CA /* SplashViewModel.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -122,6 +185,7 @@
 		4C7D06D423C9611B0096B86C /* VoA */ = {
 			isa = PBXGroup;
 			children = (
+				4C570F4623CC5FEF00C438CA /* schema.json */,
 				4C7D06D523C9611B0096B86C /* AppDelegate.swift */,
 				4C7D06D723C9611B0096B86C /* SceneDelegate.swift */,
 				4C5D650923C96CCD00822386 /* ViewController.swift */,
@@ -171,6 +235,7 @@
 			buildConfigurationList = 4C7D06F123C961250096B86C /* Build configuration list for PBXNativeTarget "VoA" */;
 			buildPhases = (
 				DF8AEC2A499C74BB97729E95 /* [CP] Check Pods Manifest.lock */,
+				4C570F4B23CC605300C438CA /* GraphQL API */,
 				4C7D06CE23C9611B0096B86C /* Sources */,
 				4C7D06CF23C9611B0096B86C /* Frameworks */,
 				4C7D06D023C9611B0096B86C /* Resources */,
@@ -248,7 +313,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7D06E223C961240096B86C /* LaunchScreen.storyboard in Resources */,
+				4C570F4723CC5FF000C438CA /* schema.json in Resources */,
 				4C7D06DF23C961240096B86C /* Assets.xcassets in Resources */,
+				4C570F4D23CC609200C438CA /* LaunchListQuery.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +351,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4C570F4B23CC605300C438CA /* GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\n#cd \"${SRCROOT}/${TARGET_NAME}\"\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+			showEnvVarsInLog = 0;
+		};
 		DF8AEC2A499C74BB97729E95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,11 +400,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5D650823C96CC100822386 /* SplashViewController.swift in Sources */,
+				4C570F5323CC621200C438CA /* VoAService.swift in Sources */,
+				4C570F5123CC61EE00C438CA /* GraphqlNetworker.swift in Sources */,
+				4C570F5623CC629E00C438CA /* ReactiveViewModelable.swift in Sources */,
+				4C570F5823CC62F700C438CA /* SplashViewModel.swift in Sources */,
+				4C570F5B23CC641700C438CA /* BaseViewController.swift in Sources */,
 				4C7D06D623C9611B0096B86C /* AppDelegate.swift in Sources */,
 				4C5D650A23C96CCD00822386 /* ViewController.swift in Sources */,
 				4C7D06D823C9611B0096B86C /* SceneDelegate.swift in Sources */,
 				4C5D651323C9710200822386 /* SplashNode.swift in Sources */,
 				4C5D650C23C96DB100822386 /* VoAColor.swift in Sources */,
+				4C570F4F23CC615400C438CA /* LaunchListQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,7 @@
+query LaunchList {
+  books {
+    title
+    author
+  }
+}
+

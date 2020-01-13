@@ -8,17 +8,28 @@
 
 import UIKit
 
-class SplashViewController: ASViewController<SplashNode> {
+import RxSwift
+import RxCocoa
+
+class SplashViewController: BaseViewController {
     
-    override init() {
-        super.init(node: SplashNode())
+    private lazy var splashNode: SplashNode = {
+        let node = SplashNode()
+        return node
+    }()
+    
+    private let viewModel = SplashViewModel()
+    private let bag = DisposeBag()
+    
+    override func setup() {
+        super.setup()
+        
+        view = splashNode.view
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func bind() {
+        super.bind()
+        
+        viewModel.input.request.accept(())
     }
 }
