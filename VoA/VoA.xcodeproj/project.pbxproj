@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C33B5CF23CD6538003A0484 /* Netwoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C33B5CE23CD6538003A0484 /* Netwoker.swift */; };
+		4C33B5D423CD690C003A0484 /* VoAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C33B5D323CD690C003A0484 /* VoAError.swift */; };
+		4C33B5D723CD6CF4003A0484 /* UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C33B5D623CD6CF4003A0484 /* UIAlertViewController.swift */; };
 		4C570F4723CC5FF000C438CA /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C570F4623CC5FEF00C438CA /* schema.json */; };
 		4C570F4D23CC609200C438CA /* LaunchListQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4C570F4C23CC609200C438CA /* LaunchListQuery.graphql */; };
 		4C570F4F23CC615400C438CA /* LaunchListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C570F4E23CC615400C438CA /* LaunchListQuery.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		087F85FA55F8FFDE72829D69 /* Pods-VoATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoATests.debug.xcconfig"; path = "Target Support Files/Pods-VoATests/Pods-VoATests.debug.xcconfig"; sourceTree = "<group>"; };
 		431B4870E5DD1BF151602FE7 /* Pods-VoATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoATests.release.xcconfig"; path = "Target Support Files/Pods-VoATests/Pods-VoATests.release.xcconfig"; sourceTree = "<group>"; };
+		4C33B5CE23CD6538003A0484 /* Netwoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwoker.swift; sourceTree = "<group>"; };
+		4C33B5D323CD690C003A0484 /* VoAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoAError.swift; sourceTree = "<group>"; };
+		4C33B5D623CD6CF4003A0484 /* UIAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertViewController.swift; sourceTree = "<group>"; };
 		4C570F4623CC5FEF00C438CA /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		4C570F4C23CC609200C438CA /* LaunchListQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchListQuery.graphql; sourceTree = "<group>"; };
 		4C570F4E23CC615400C438CA /* LaunchListQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchListQuery.swift; path = VoA/Source/Common/SDK/Graphql/Query/LaunchListQuery.swift; sourceTree = SOURCE_ROOT; };
@@ -89,10 +95,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C33B5CD23CD6524003A0484 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				4C33B5CE23CD6538003A0484 /* Netwoker.swift */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		4C33B5D223CD6902003A0484 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				4C33B5D323CD690C003A0484 /* VoAError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		4C33B5D523CD6CE9003A0484 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C33B5D623CD6CF4003A0484 /* UIAlertViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4C570F4823CC5FFB00C438CA /* SDK */ = {
 			isa = PBXGroup;
 			children = (
 				4C570F5223CC621200C438CA /* VoAService.swift */,
+				4C33B5CD23CD6524003A0484 /* REST */,
 				4C570F4923CC600100C438CA /* Graphql */,
 			);
 			path = SDK;
@@ -144,6 +175,8 @@
 		4C5D650523C96CA800822386 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C33B5D523CD6CE9003A0484 /* Extension */,
+				4C33B5D223CD6902003A0484 /* Error */,
 				4C570F5923CC640D00C438CA /* Base */,
 				4C570F5423CC628B00C438CA /* Protocol */,
 				4C570F4823CC5FFB00C438CA /* SDK */,
@@ -399,7 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C33B5D723CD6CF4003A0484 /* UIAlertViewController.swift in Sources */,
 				4C5D650823C96CC100822386 /* SplashViewController.swift in Sources */,
+				4C33B5D423CD690C003A0484 /* VoAError.swift in Sources */,
+				4C33B5CF23CD6538003A0484 /* Netwoker.swift in Sources */,
 				4C570F5323CC621200C438CA /* VoAService.swift in Sources */,
 				4C570F5123CC61EE00C438CA /* GraphqlNetworker.swift in Sources */,
 				4C570F5623CC629E00C438CA /* ReactiveViewModelable.swift in Sources */,

@@ -6,10 +6,18 @@
 //  Copyright © 2020 Linsaeng. All rights reserved.
 //
 
+import Alamofire
+
 class VoAService: NSObject {
 
     public var commonHeader: [AnyHashable : Any] {
         var headers = [AnyHashable : Any]()
+        headers[""] = ""
+        return headers
+    }
+    
+    public var restHeader: HTTPHeaders {
+        var headers = HTTPHeaders()
         headers[""] = ""
         return headers
     }
