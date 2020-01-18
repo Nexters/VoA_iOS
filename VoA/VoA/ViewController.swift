@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 }
 
 private extension ViewController {
-    func moveSplash() -> SplashViewController {
-        return SplashViewController()
+    func moveSplash() -> BaseViewController {
+        return SplashViewController.instance()
     }
 }

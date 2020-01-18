@@ -3,17 +3,16 @@ platform :ios, '13.0'
 
 target 'VoA' do
   
-  pod 'RxSwift', '5.0.0'
-  pod 'RxCocoa', '5.0.0'
-  pod 'SnapKit', '5.0.0'
-  pod 'Alamofire', '5.0.0-rc.3'
-  pod 'ObjectMapper', '~> 3.4'
-  pod 'SwiftyJSON', '4.0'
-  pod 'SwiftlyIndicator'
-  pod 'Texture', :git =>  'https://github.com/TextureGroup/Texture.git', :branch => 'master', :inhibit_warnings => true
+  pod 'RxSwift', '5.0.0', :inhibit_warnings => true
+  pod 'RxCocoa', '5.0.0', :inhibit_warnings => true
+  pod 'SnapKit', '5.0.0', :inhibit_warnings => true
+  pod 'Alamofire', '5.0.0-rc.3', :inhibit_warnings => true
+  pod 'ObjectMapper', '~> 3.4', :inhibit_warnings => true
+  pod 'SwiftyJSON', '4.0', :inhibit_warnings => true
+  pod 'SwiftlyIndicator', '1.2.0'
   
-  pod 'Apollo', '0.20.0'
-  pod 'RxApolloClient', '1.3.0'
+  pod 'Apollo', '0.20.0', :inhibit_warnings => true
+  pod 'RxApolloClient', '1.3.0', :inhibit_warnings => true
 
   target 'VoATests' do
     inherit! :search_paths

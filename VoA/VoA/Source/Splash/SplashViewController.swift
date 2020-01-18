@@ -8,14 +8,19 @@
 
 import UIKit
 
+import SwiftlyIndicator
 import RxSwift
 import RxCocoa
 
 class SplashViewController: BaseViewController {
     
-    private lazy var splashNode: SplashNode = {
-        let node = SplashNode()
-        return node
+    static func instance() -> BaseViewController {
+        return SplashViewController()
+    }
+    
+    private lazy var splashView: SplashView = {
+        let splashView = SplashView()
+        return splashView
     }()
     
     private let viewModel = SplashViewModel()
@@ -24,7 +29,8 @@ class SplashViewController: BaseViewController {
     override func setup() {
         super.setup()
         
-        view = splashNode.view
+        view = splashView
+        addIndicator(view: splashView)
     }
     
     override func bind() {
